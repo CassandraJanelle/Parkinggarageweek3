@@ -1,7 +1,14 @@
-echo "# Parkinggarageweek3" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/CassandraJanelle/Parkinggarageweek3.git
-git push -u origin main
+class Garage:
+    def __init__(self):
+        self.tickets = []
+        self.parkingSpaces = []
+        self.currentTicket = {}
+
+    def takeTicket(self):
+        if self.tickets == []:
+            print("Parking lot is full")
+        else:
+            for ticket in self.tickets:
+                self.tickets.pop(ticket)
+
+    def run(self):
