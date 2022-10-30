@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ParkingGarage class definition
 class ParkingGarage():
 
@@ -25,3 +26,19 @@ def payForParking(self):
             # update the "currentTicket" dictionary key "paid" to True
             self.currentTicket['Paid'] = True
             print('ticket has been paid, you have 15 minutes to leave')
+=======
+class Garage:
+    def __init__(self):
+        self.tickets = []
+        self.parkingSpaces = []
+        self.currentTicket = {}
+
+    def takeTicket(self):
+        if self.tickets == []:
+            print("Parking lot is full")
+        else:
+            for ticket in self.tickets:
+                self.tickets.pop(ticket)
+
+    def run(self):
+>>>>>>> 3d2dbef24647be23fe2f4ec09d69288db6ff5ad1
