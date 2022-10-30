@@ -1,12 +1,20 @@
-class Garage:
+
+# ParkingGarage class definition
+class ParkingGarage():
+
+    # ParkingGarage constructor definition
     def __init__(self):
-        self.tickets = []
-        self.parkingspaces = []
-        self.curentTicket = {}
+        self.tickets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.parkingSpaces = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.currentTicket = {}
 
+    # takeTicket function definition
     def takeTicket(self):
-        pass
 
+         # decrease the amount of tickets available by 1
+        self.tickets.remove(self.tickets[-1])
+         # decrease the amount of parkingSpaces available by 1
+        self.parkingSpaces.remove(self.parkingSpaces[-1])
 
     def payForParking(self):
         payment = 0
@@ -17,8 +25,6 @@ class Garage:
         
         self.curentTicket['paid'] = True
     
-    def leaveGarage(self):
-        pass
 
     def run(self):
         print("""
