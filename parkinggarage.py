@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ParkingGarage class definition
 class ParkingGarage():
 
@@ -16,29 +16,36 @@ class ParkingGarage():
          # decrease the amount of parkingSpaces available by 1
         self.parkingSpaces.remove(self.parkingSpaces[-1])
 
-# function definition for payForParking
-def payForParking(self):
-
-    amount = input('Enter 1 to pay now: ')
-
-    if amount == '1':
-
-            # update the "currentTicket" dictionary key "paid" to True
-            self.currentTicket['Paid'] = True
-            print('ticket has been paid, you have 15 minutes to leave')
-=======
-class Garage:
-    def __init__(self):
-        self.tickets = []
-        self.parkingSpaces = []
-        self.currentTicket = {}
-
-    def takeTicket(self):
-        if self.tickets == []:
-            print("Parking lot is full")
-        else:
-            for ticket in self.tickets:
-                self.tickets.pop(ticket)
+    def payForParking(self):
+        payment = 0
+        while payment <=0:
+            payment = input("Please enter payment amount: ")
+            if payment <= 0:
+                print("Invalid amount")
+        
+        self.curentTicket['paid'] = True
+    
 
     def run(self):
->>>>>>> 3d2dbef24647be23fe2f4ec09d69288db6ff5ad1
+        print("""
+        What would you like to do?
+        1 - Take Ticket
+        2 - Pay for Parking
+        3 - Leave Garage
+        4 - Quit
+        """)
+
+        while True:
+            response = input("Choose a numbered option from list: ")
+
+            if response == '1':
+                self.takeTicket()
+            elif response == '2':
+                self.payForParking
+            elif response == '3':
+                self.leaveGarage()
+            elif response == '4':
+                print("Thanks for coming to 'Parking up the wrong tree', where if you don't pay there will be tyre consequences!")
+                break
+            else:
+                print("Invalid response, please choose numbered option from list!")
