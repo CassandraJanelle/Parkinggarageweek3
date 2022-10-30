@@ -48,6 +48,7 @@ class ParkingGarage():
                 print("Thanks for coming to 'Parking up the wrong tree', where if you don't pay there will be tyre consequences!")
                 break
             else:
+
                 print("Invalid response, please choose numbered option from list!")
 
 
@@ -106,24 +107,3 @@ class parkingGarage():
         else:
             print('Please pay before leaving.')
 
-def park():
-        parking = parkingGarage([1,2,3,4,5], [1,2,3,4,5], {}, {})
-        while True:
-            userTalk = input('Welcome. Would you like to park, pay, or leave? ')
-            
-            if userTalk.lower() == 'park':
-                parking.takeTicket()
-                        
-            elif userTalk.lower() == 'pay':
-                parking.payForParking()
-                
-            elif userTalk.lower() == 'leave':
-                parking.leaveGarage()
-            
-            elif userTalk.lower() == 'quit':
-                break
-            
-            else:
-                print('Type a valid command.')
-
-park()
